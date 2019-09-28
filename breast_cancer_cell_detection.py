@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn import preprocessing, cross_validation
+from sklearn import preprocessing, cross_validation           #check this
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn import model_selection
@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Load Dataset
-url = "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data"
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data"      #check this
 names = ['id', 'clump_thickness', 'uniform_cell_size', 'uniform_cell_shape',
        'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei',
        'bland_chromatin', 'normal_nucleoli', 'mitoses', 'class']
@@ -26,7 +26,7 @@ df.drop(['id'], 1, inplace=True)
 X = np.array(df.drop(['class'], 1))
 y = np.array(df['class'])
 
-X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2)      #check this
 
 # Testing Options
 seed = 8
